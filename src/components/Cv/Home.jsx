@@ -40,7 +40,7 @@ const Home = ({ setResult }) => {
 		formData.append("currentTechnologies", currentTechnologies);
 		formData.append("workHistory", JSON.stringify(companyInfo));
 		axios
-			.post("http://localhost:8080/resume/create", formData, {})
+			.post("https://aiproresume-back.onrender.com/resume/create", formData, {})
 			.then((res) => {
 				if (res.data.message) {
 					setResult(res.data.data);
